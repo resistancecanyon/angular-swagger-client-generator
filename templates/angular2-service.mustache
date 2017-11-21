@@ -2,7 +2,11 @@ import { Inject, Injectable, Optional } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
-import { {{#definitions}}{{name}}{{^last}}, {{/last}}{{/definitions}} } from './models';
+import {
+{{#definitions}}  {{name}}{{^last}},
+{{/last}}{{/definitions}}
+
+} from './models';
 
 /**
 * Created with angular4-swagger-client-generator.
@@ -25,9 +29,9 @@ export class ApiClientService {
   {{/summaryLines}}
   * Method {{&methodName}}
   {{#parameters}}
-  {{^isSingleton}}* @param {{&camelCaseName}} The {{&description}}{{/isSingleton}}
+  {{^isSingleton}}* @param {{&camelCaseName}} {{&description}}{{/isSingleton}}
   {{/parameters}}
-  * @return The full HTTP response as Observable
+  * @return Full HTTP response as Observable
   */
   public {{&methodName}}({{#parameters}}{{&camelCaseName}}: {{typescriptType}}{{^last}}, {{/last}}{{/parameters}}): Observable<HttpResponse<{{&response}}>> {
     let uri = `{{&backTickPath}}`;

@@ -2,7 +2,7 @@
 
 /**
  * Command line interface (CLI) for generator.
- * @package angular4-swagger-client-generator
+ * @package angular-swagger-client-generator
  * @author Michal Krchnavy <michal@krchnavy.sk>
  */
 var optimist = require('optimist')

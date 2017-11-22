@@ -1,5 +1,5 @@
-# angular4-swagger-client-generator
-Angular4 API client generator from Swagger JSON specification
+# angular-swagger-client-generator
+Angular API client generator from Swagger JSON specification
 
 # Description
 This package generates a Angular 4 TypeScript classes from a Swagger v2.0 specification file. The code is generated using Mustache templates.
@@ -10,12 +10,12 @@ The generated service class uses new [HttpClient](https://angular.io/guide/http)
 
 ## Installation
 
-`npm install angular4-swagger-client-generator`
+`npm install angular-swagger-client-generator`
 
 or  
 
-`git clone https://github.com/lotjomik/angular4-swagger-client-generator`  
-`cd angular4-swagger-client-generator`  
+`git clone https://github.com/resistancecanyon/angular-swagger-client-generator`  
+`cd angular-swagger-client-generator`  
 `npm install`  
 `npm run build`  
 

@@ -33,7 +33,7 @@ export class ApiClientService {
   {{/parameters}}
   * @return Full HTTP response as Observable
   */
-  public {{&methodName}}({{#parameters}}{{&camelCaseName}}: {{typescriptType}}{{^last}}, {{/last}}{{/parameters}}): Observable<HttpResponse<{{&response}}>> {
+  public {{&methodName}}({{#parameters}}{{&camelCaseName}}: {{typescriptType}}{{^last}}, {{/last}}{{/parameters}}): Observable<{{&response}}> {
     let uri = `{{&backTickPath}}`;
     let headers = new HttpHeaders();
     let params = new HttpParams();
@@ -86,7 +86,7 @@ export class ApiClientService {
   }
 
 {{/methods}}
-  private sendRequest<T>(method: string, uri: string, headers: HttpHeaders, params: HttpParams, body: any): Observable<HttpResponse<T>> {
+  private sendRequest<T>(method: string, uri: string, headers: HttpHeaders, params: HttpParams, body: any): Observable<T> {
     if (method === 'get') {
       return this.http.get<T>(this.domain + uri, { headers: headers.set('Accept', 'application/json'), params: params });
     } else if (method === 'put') {

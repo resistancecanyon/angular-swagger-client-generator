@@ -1,6 +1,6 @@
 {
   "name": "angular-swagger-client-generator",
-  "version": "0.1.12",
+  "version": "0.1.14",
   "description": "Angular REST API client generator from Swagger JSON using new HttpClient api",
   "homepage": "https://github.com/resistancecanyon/angular-swagger-client-generator",
   "main": "index.js",
@@ -33,6 +33,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "a4apigen": "a4apigen -s swagger.json",
+    "postinstall": "gulp",
     "build": "gulp"
   },
   "dependencies": {

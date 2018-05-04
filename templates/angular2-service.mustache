@@ -8,6 +8,15 @@ import {
 
 } from './models';
 
+interface HttpOptions {
+  headers?: HttpHeaders | { [header: string]: string | string[] },
+  observe?: HttpObserve,
+  params?: HttpParams | { [param: string]: string | string[] },
+  reportProgress?: boolean,
+  responseType?: 'arraybuffer' | 'blob' | 'json' | 'text',
+  withCredentials?: boolean,
+}
+
 /**
 * Created with angular-swagger-client-generator.
 */
